@@ -95,10 +95,15 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
  
  举例:
  原始配置文件中“media_playing”,表示的意思是:当前不是勿扰模式，并且不处于AI处理中、等待处理、正在加载多媒体、正在配网状态，并且正在播放多媒体。则显示"media_playing"灯效
+ 
  4. 生成决策文件
 	 1.准备好python3的环境
 	 2.复制led_state_config_roobo.csv到resource中的DecisionTree文件夹中，执行下面命令生成"led_state_decision_tree.json"文件
-	 python3 generate.py led_state_config_roobo.csv led_state_decision_tree.json
+	 
+```
+ python3 generate.py led_state_config_roobo.csv  led_state_decision_tree.json
+```
+ 
 5.  push 文件到设备(配置文件名必须是"led_state_decision_tree.json")。
 
  ```java
