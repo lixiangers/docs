@@ -53,6 +53,7 @@ Effect:
 EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 
 注意：Effect的优先级要高于State
+
 5. Application初始化
 在Application 的onCreate方法中注册LEDService
 ```java
@@ -97,11 +98,8 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
  4. 生成决策文件
 	 1.准备好python3的环境
 	 2.复制led_state_config_roobo.csv到resource中的DecisionTree文件夹中，执行下面命令生成"led_state_decision_tree.json"文件
-	 
-	```java
-	python3 generate.py led_state_config_roobo.csv led_state_decision_tree.json
-	```
- 5.  push 文件到设备(配置文件名必须是"led_state_decision_tree.json")。
+	 python3 generate.py led_state_config_roobo.csv led_state_decision_tree.json
+5.  push 文件到设备(配置文件名必须是"led_state_decision_tree.json")。
 
  ```java
  adb push led_state_decision_tree.json_path /sdcard/ros/configure/
