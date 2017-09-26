@@ -68,9 +68,12 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 当前LED要显示什么State，是和PowerState和ActiveState两个因素有关。不同的音响产品要根据这两种State去决定显示具体的State。某一时刻PowerState只会有一个，ActivieState有一个或多个。
 
  1. Power State
- >Standby:当前处在唤醒模式中\r\n
- >Asleep-当前处在休眠模式\r\n
- >DeepSleep-当前处在勿扰模式\r\n
+ >Standby:当前处在唤醒模式中  
+ 
+ >Asleep-当前处在休眠模式  
+ 
+ >DeepSleep-当前处在勿扰模式  
+ 
  
  2. Active State
  > Listening:正在拾音
