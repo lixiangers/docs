@@ -58,7 +58,8 @@ State:
 Effect:  
 >Effect是独立于State的。现在RooboOS中定义了四种Effect,如果自己增加场景，可以增加Effect  
 >EFFECT_VOLUME:调节声音时候的灯效  
->EFFECT_BOOT_COMPLETE：启动完成的灯效   >EFFECT_NETWORK_SETTING_SUCCESS:配置网络成功灯效   
+>EFFECT_BOOT_COMPLETE：启动完成的灯效  
+>EFFECT_NETWORK_SETTING_SUCCESS:配置网络成功灯效   
 >EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效  
 
 注意：Effect的优先级要高于State
