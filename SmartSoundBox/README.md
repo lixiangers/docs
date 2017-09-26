@@ -68,9 +68,9 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 当前LED要显示什么State，是和PowerState和ActiveState两个因素有关。不同的音响产品要根据这两种State去决定显示具体的State。某一时刻PowerState只会有一个，ActivieState有一个或多个。
 
  1. Power State
- >Standby:当前处在唤醒模式中
- >Asleep-当前处在休眠模式
- >DeepSleep-当前处在勿扰模式
+ >Standby:当前处在唤醒模式中\r\n
+ >Asleep-当前处在休眠模式\r\n
+ >DeepSleep-当前处在勿扰模式\r\n
  
  2. Active State
  > Listening:正在拾音
@@ -88,9 +88,9 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
  如图：
 只需要更改"输出"这一列,其他内容不要修改。根据自己产品的需求自定义各种State组合下输出的State。定义的State，一定要在LEDService的showState()中实现对应的LED灯效。
  决策表配置规则：
- > 1.每一行对应一种LED State
- > 2.每种State 可以输入的值为"Y","N",空三种值
- > 3.Y表示当前状态中必须有这种状态，N表示状态中必须没有这种状态，空表示状态中有没有这种状态都可以
+ > 1.每一行对应一种LED State\r\n
+ > 2.每种State 可以输入的值为"Y","N",空三种值\r\n
+ > 3.Y表示当前状态中必须有这种状态，N表示状态中必须没有这种状态，空表示状态中有没有这种状态都可以\r\n
  > 4.各种state是逻辑与的关系
  
  举例:
