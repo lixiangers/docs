@@ -69,9 +69,7 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 
  1. Power State
  >Standby:当前处在唤醒模式中  
- 
  >Asleep-当前处在休眠模式  
- 
  >DeepSleep-当前处在勿扰模式  
  
  
