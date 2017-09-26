@@ -96,8 +96,8 @@ Effect:
  
  3. 配置决策表
  在resource文件夹中led_state_config_roobo.csv是LED灯效的默认配置。
- 如图：
- ![](/assets/led.png)
+ 
+ ![如图:](/SmartSoundBox/assets/led.png)
 只需要更改"输出"这一列,其他内容不要修改。根据自己产品的需求自定义各种State组合下输出的State。定义的State，一定要在LEDService的showState()中实现对应的LED灯效。
  决策表配置规则：
 	 > 1.每一行对应一种LED State  
