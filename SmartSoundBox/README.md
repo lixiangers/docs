@@ -5,8 +5,8 @@
 [2.集成准备](#集成准备)
 
 [3.集成步骤](#集成步骤)
-* [3.1 实现LEDService](#实现LEDService)
-* [3.2 LED灯效优先级配置](#LED灯效优先级配置)
+* [3.1 实现LEDService](#实现灯效服务)
+* [3.2 LED灯效优先级配置](#灯效优先级配置)
 * [3.3 实现自己的场景](#实现自己的场景)
 
 [4.安装部署](#安装部署)
@@ -26,7 +26,7 @@
 > deploy.py : 部署脚本  
 
 ### 集成步骤
-#### 实现LEDService
+#### 实现灯效服务
  1. 新建LED App
  2. 导入Jar
   导入resource中
@@ -75,7 +75,7 @@ Effect:
   }
 ```
 
-#### LED灯效优先级配置
+#### 灯效优先级配置
 当前LED要显示什么State，是和PowerState和ActiveState两个因素有关。不同的音响产品要根据这两种State去决定显示具体的State。某一时刻PowerState只会有一个，ActivieState有一个或多个。
 
  1. Power State
@@ -119,7 +119,7 @@ Effect:
 
 #### 实现自己的场景
 
-如果需要怎讲场景请[参考RooboOS 添加场景使用说明](https://github.com/roobo/docs/blob/master/OS/quickStartCreateScene.md)
+如果需要增加场景请[参考RooboOS 添加场景使用说明](https://github.com/roobo/docs/blob/master/OS/quickStartCreateScene.md)
 
 注意：在新增加的场景中如果存在对语音输入动作，需要发送"ACTION_DONE"State,让LED停止Loading状态。详细使用参考Demo中的
 OSStateHelper.sendActionDone();
