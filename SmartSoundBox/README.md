@@ -2,8 +2,11 @@
 
 ### 集成准备
   [resource下载](https://pan.baidu.com/s/1eSCMlzG)
+  
   [SmartSoundBoxDemo下载](https://pan.baidu.com/s/1eSCMlzG)
+  
   resource内容：
+  
   > SceneSDK-*.jar：场景开发SDK   
   > led_state_config_roobo.csv：LED 灯效优先级配置模板    
  > DecisionTree：LED配置文件生成工具   
@@ -33,15 +36,15 @@
 实现showState(),showEffect(),cancelEffect()方法(具体实现参考Demo中的 LEDService)。
 
 State:
-> State 包括 Power state和Action State。  
-> LEDState 是根据当前的Power state(只有一个)和Action State(会有多个)通过配置决策表来自定义当前LED 输出的State。  
-> Power state:   
-> 3种(Standby-唤醒模式,Asleep-休眠模式,DeepSleep-勿扰模式)  
-> Action State:    
- RooboOS中从语音输入到场景响应整个流程中定义了不同的Action State。在同一时刻会存在多个Action State的情况，例如正在播放音乐的时候又和设备进行对话。
+		> State 包括 Power state和Action State。  
+		> LEDState 是根据当前的Power state(只有一个)和Action State(会有多个)通过配置决策表来自定义当前LED 输出的State。  
+		> Power state:   
+		> 3种(Standby-唤醒模式,Asleep-休眠模式,DeepSleep-勿扰模式)  
+		> Action State:    
+		 RooboOS中从语音输入到场景响应整个流程中定义了不同的Action State。在同一时刻会存在多个Action State的情况，例如正在播放音乐的时候又和设备进行对话。
 
 Effect:  
->Effect是独立于State的。现在RooboOS中定义了四种Effect,如果自己增加场景，可以增加Effect。 
+	>Effect是独立于State的。现在RooboOS中定义了四种Effect,如果自己增加场景，可以增加Effect。 
  EFFECT_VOLUME:调节声音时候的灯效  
  EFFECT_BOOT_COMPLETE：启动完成的灯效  
  EFFECT_NETWORK_SETTING_SUCCESS:配置网络成功灯效   
@@ -64,20 +67,20 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 当前LED要显示什么State，是和PowerState和ActiveState两个因素有关。不同的音响产品要根据这两种State去决定显示具体的State。某一时刻PowerState只会有一个，ActivieState有一个或多个。
 
  1. Power State
- >Standby:当前处在唤醒模式中
- >Asleep-当前处在休眠模式
- >DeepSleep-当前处在勿扰模式
+	 >Standby:当前处在唤醒模式中
+	 >Asleep-当前处在休眠模式
+	 >DeepSleep-当前处在勿扰模式
  
  2. Active State  
- > Listening:正在拾音  
- > Translating:拾音结束正在语音识别中  
- > WaitingAI:语音识别完成，正在等待AI处理  
- > AILoading：AI正在处理中  
- > WaitingAction:AI处理完成，等待场景响应  
- > tts_play：正在TTS  
- > media_loading：正在加载多媒体  
- > music_play：正在播放多媒体  
- > net_config：正在配网  
+	 > Listening:正在拾音  
+	 > Translating:拾音结束正在语音识别中  
+	 > WaitingAI:语音识别完成，正在等待AI处理  
+	 > AILoading：AI正在处理中  
+	 > WaitingAction:AI处理完成，等待场景响应  
+	 > tts_play：正在TTS  
+	 > media_loading：正在加载多媒体  
+	 > music_play：正在播放多媒体  
+	 > net_config：正在配网  
  
  3. 配置决策表
  在resource文件夹中led_state_config_roobo.csv是LED灯效的默认配置。
