@@ -28,8 +28,7 @@
 ### 集成步骤
 #### 实现LEDService
  1. 新建LED App
- 2. 导入Jar
-  导入resource中
+ 2. 导入SceneSDK-*.jar
  3. 配置AndroidMainfest
  在Application 节点下添加以下代码
 ``` java
@@ -48,16 +47,16 @@
 
 实现showState(),showEffect(),cancelEffect()方法(具体实现参考Demo中的 LEDService)。
 
-State:
->State 包括 Power state和Action State。  
+State: 
 >LEDState 是根据当前的Power state(只有一个)和Action State(会有多个)通过配置决策表来自定义当前LED 输出的State。  
 >Power state:   
 >3种(Standby-唤醒模式,Asleep-休眠模式,DeepSleep-勿扰模式)  
 >Action State:    
  >RooboOS中从语音输入到场景响应整个流程中定义了不同的Action State。在同一时刻会存在多个Action State的情况，例如正在播放音乐的时候又和设备进行对话。
 
+
 Effect:  
->Effect是独立于State的。现在RooboOS中定义了四种Effect,如果自己增加场景，可以增加Effect。 
+>Effect是独立于State的。现在RooboOS中定义了四种Effect,如果自己增加场景，可以增加Effect  
 >EFFECT_VOLUME:调节声音时候的灯效  
 >EFFECT_BOOT_COMPLETE：启动完成的灯效   >EFFECT_NETWORK_SETTING_SUCCESS:配置网络成功灯效   
 >EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效  
