@@ -36,19 +36,18 @@
 实现showState(),showEffect(),cancelEffect()方法(具体实现参考Demo中的 LEDService)。
 
 State:
-		> State 包括 Power state和Action State。  
-		> LEDState 是根据当前的Power state(只有一个)和Action State(会有多个)通过配置决策表来自定义当前LED 输出的State。  
-		> Power state:   
-		> 3种(Standby-唤醒模式,Asleep-休眠模式,DeepSleep-勿扰模式)  
-		> Action State:    
-		 RooboOS中从语音输入到场景响应整个流程中定义了不同的Action State。在同一时刻会存在多个Action State的情况，例如正在播放音乐的时候又和设备进行对话。
+	> State 包括 Power state和Action State。  
+	> LEDState 是根据当前的Power state(只有一个)和Action State(会有多个)通过配置决策表来自定义当前LED 输出的State。  
+	> Power state:   
+	> 3种(Standby-唤醒模式,Asleep-休眠模式,DeepSleep-勿扰模式)  
+	> Action State:    
+	 RooboOS中从语音输入到场景响应整个流程中定义了不同的Action State。在同一时刻会存在多个Action State的情况，例如正在播放音乐的时候又和设备进行对话。
 
 Effect:  
 	>Effect是独立于State的。现在RooboOS中定义了四种Effect,如果自己增加场景，可以增加Effect。 
- EFFECT_VOLUME:调节声音时候的灯效  
- EFFECT_BOOT_COMPLETE：启动完成的灯效  
- EFFECT_NETWORK_SETTING_SUCCESS:配置网络成功灯效   
-EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效  
+	>EFFECT_VOLUME:调节声音时候的灯效  
+	>EFFECT_BOOT_COMPLETE：启动完成的灯效   >EFFECT_NETWORK_SETTING_SUCCESS:配置网络成功灯效   
+	>EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效  
 
 注意：Effect的优先级要高于State
 
@@ -87,10 +86,10 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
  如图：
 只需要更改"输出"这一列,其他内容不要修改。根据自己产品的需求自定义各种State组合下输出的State。定义的State，一定要在LEDService的showState()中实现对应的LED灯效。
  决策表配置规则：
- > 1.每一行对应一种LED State  
- > 2.每种State 可以输入的值为"Y","N",空三种值  
- > 3.Y表示当前状态中必须有这种状态，N表示状态中必须没有这种状态，空表示状态中有没有这种状态都可以  
- > 4.各种state是逻辑与的关系  
+	 > 1.每一行对应一种LED State  
+	 > 2.每种State 可以输入的值为"Y","N",空三种值  
+	 > 3.Y表示当前状态中必须有这种状态，N表示状态中必须没有这种状态，空表示状态中有没有这种状态都可以  
+	 > 4.各种state是逻辑与的关系  
  
  举例:
  原始配置文件中“media_playing”,表示的意思是:当前不是勿扰模式，并且不处于AI处理中、等待处理、正在加载多媒体、正在配网状态，并且正在播放多媒体。则显示"media_playing"灯效
