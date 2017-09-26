@@ -4,14 +4,14 @@
   [resource下载](https://pan.baidu.com/s/1eSCMlzG)
   [SmartSoundBoxDemo下载](https://pan.baidu.com/s/1eSCMlzG)
   resource内容：
-  > SceneSDK-*.jar：场景开发SDK 
-  > led_state_config_roobo.csv：LED 灯效优先级配置模板 
- > DecisionTree：LED配置文件生成工具
-> deploy.py : 部署脚本
+  > SceneSDK-*.jar：场景开发SDK   
+  > led_state_config_roobo.csv：LED 灯效优先级配置模板    
+ > DecisionTree：LED配置文件生成工具   
+> deploy.py : 部署脚本  
 
 ### 集成步骤
 #### 实现LEDService
- 1. 新建App
+ 1. 新建LED App
  2. 导入Jar
   导入resource中
  3. 配置AndroidMainfest
@@ -29,7 +29,9 @@
 ```
 
 4.实现ILEDService.Stub接口
+
 实现showState(),showEffect(),cancelEffect()方法(具体实现参考Demo中的 LEDService)。
+
 State:
 > State 包括 Power state和Action State。  
 > LEDState 是根据当前的Power state(只有一个)和Action State(会有多个)通过配置决策表来自定义当前LED 输出的State。  
@@ -48,6 +50,7 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 注意：Effect的优先级要高于State
 
 5. Application初始化
+
 在Application 的onCreate方法中注册LEDService
 ```java
   public void onCreate() {
@@ -102,6 +105,7 @@ EFFECT_NETWORK_SETTING_FAILURE：配网网络失败灯效
 ### 安装部署
 
 1.进入resource根目录执行
-	  > python deploy new/old(第一次部署一定要使用new,以后使用old/new 都可以)
+
+> python deploy new/old(第一次部署一定要使用new,以后使用old/new 都可以)
 	  
 2.安装自己的LED App
