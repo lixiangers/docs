@@ -7,7 +7,7 @@
 [3.集成步骤](#集成步骤)
 * [3.1 实现LEDService](#实现LEDService)
 * [3.2 LED灯效优先级配置](#灯效优先级配置)
-* [3.3 实现自己的场景](#实现自己的场景)
+* [3.3 添加自己的场景](#添加自己的场景)
 
 [4.安装部署](#安装部署)
 
@@ -96,7 +96,7 @@ Effect:
  
  3. 配置决策表
  
- 在resource文件夹中led_state_config_roobo.csv是LED灯效的默认配置。
+ 在resource文件夹中led_state_config_roobo.csv是LED灯效优先级配置的模板。
  
  ![如图](/SmartSoundBox/assets/led.png)
 只需要更改"输出"这一列,其他内容不要修改。根据自己产品的需求自定义各种State组合下输出的State。定义的State，一定要在LEDService的showState()中实现对应的LED灯效。
@@ -120,9 +120,9 @@ Effect:
 	 python3 generate.py led_state_config_roobo.csv  led_state_decision_tree.json
 	```
  
- 5. 复制 "led_state_decision_tree.json"到resource文件夹中的resource\data\sdcard\ros\configure目录下，覆盖以前的配置文件。
+ 5. 复制 "led_state_decision_tree.json"到resource文件夹中的resource\data\sdcard\ros\configure目录下，覆盖以前的配置文件。(如果单独更新led配置文件，只需要把"led_state_decision_tree.json" push 到/sdcard/ros/configure下，然后重新启动com.roobo.systemscene进程)
 
-#### 实现自己的场景
+#### 添加自己的场景
 
 如果需要增加场景请[参考RooboOS 添加场景使用说明](https://github.com/roobo/docs/blob/master/OS/quickStartCreateScene.md)
 
@@ -134,4 +134,4 @@ OSStateHelper.sendActionDone();
 
 > python deploy new/old(第一次部署一定要使用new,以后使用old)
 	  
-2.安装自己的LED App
+2.安装自己的LED App和场景App
