@@ -7,7 +7,7 @@
 [3.集成步骤](#集成步骤)
 * [3.1 实现LEDService](#实现LEDService)
 * [3.2 LED灯效优先级配置](#LED灯效优先级配置)
-* [3.3 实现自己的场景](#实现自己的场景(非必需))
+* [3.3 实现自己的场景](#实现自己的场景)
 
 [4.安装部署](#安装部署)
 
@@ -117,8 +117,9 @@ Effect:
  
  5. 复制 "led_state_decision_tree.json"到resource文件夹中的resource\data\sdcard\ros\configure目录下，覆盖以前的配置文件。
 
-#### 实现自己的场景(非必需)
-[参考RooboOS 添加场景使用说明](https://github.com/roobo/docs/blob/master/OS/quickStartCreateScene.md)
+#### 实现自己的场景
+
+如果需要怎讲场景请[参考RooboOS 添加场景使用说明](https://github.com/roobo/docs/blob/master/OS/quickStartCreateScene.md)
 
 注意：在新增加的场景中如果存在对语音输入动作，需要发送"ACTION_DONE"State,让LED停止Loading状态。详细使用参考Demo中的
 OSStateHelper.sendActionDone();
