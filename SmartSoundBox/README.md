@@ -15,11 +15,10 @@
 智能音箱平台是Roobo开发的一套完整智能音箱的解决方案，用户只需要去集成自己的LED功能就可以得到的自己的音箱产品。主要功能有天气，闲聊，音乐。如果有自己的场景，也可以自己新增场景。
 
 ### 集成准备
-  [resource下载](https://pan.baidu.com/s/1eSCMlzG)
   
   [SmartSoundBoxDemo下载](https://pan.baidu.com/s/1eSCMlzG)
   
-  resource内容：
+  resource内容介绍：(SmartSoundBoxDemo的resource文件夹)
   
   > SceneSDK-*.jar：场景开发SDK   
   > led_state_config_roobo.csv：LED 灯效优先级配置模板    
