@@ -100,12 +100,13 @@ Effect:
  
  ![如图](/SmartSoundBox/assets/led.png)
 只需要更改"输出"这一列,其他内容不要修改。根据自己产品的需求自定义各种State组合下输出的State。定义的State，一定要在LEDService的showState()中实现对应的LED灯效。
- 决策表配置规则：
-	 > 1.每一行对应一种LED State  
-	 > 2.每种State 可以输入的值为"Y","N",空三种值  
-	 > 3.Y表示当前状态中必须有这种状态，N表示状态中必须没有这种状态，空表示状态中有没有这种状态都可以  
-	 > 4.各种state是逻辑与的关系  
- 
+
+决策表配置规则： 
+ > 1.每一行对应一种LED State  
+ > 2.每种State 可以输入的值为"Y","N",空三种值  
+ > 3.Y表示当前状态中必须有这种状态，N表示状态中必须没有这种状态，空表示状态中有没有这种状态都可以  
+ > 4.各种state是逻辑与的关系  
+
  举例:
  原始配置文件中“media_playing”,表示的意思是:当前不是勿扰模式，并且不处于AI处理中、等待处理、正在加载多媒体、正在配网状态，并且正在播放多媒体。则显示"media_playing"灯效
  
@@ -125,7 +126,7 @@ Effect:
 
 如果需要增加场景请[参考RooboOS 添加场景使用说明](https://github.com/roobo/docs/blob/master/OS/quickStartCreateScene.md)
 
-注意：在新增加的场景中如果存在对语音输入动作，需要发送"ACTION_DONE"State,让LED停止Loading状态。详细使用参考Demo中的
+注意：在新增加的场景中如果存在对语音输入响应的动作，需要在动作执行前发送"ACTION_DONE"State,让LED停止Loading状态。详细使用参考Demo中的
 OSStateHelper.sendActionDone();
 ### 安装部署
 
