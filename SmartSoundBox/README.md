@@ -95,9 +95,10 @@ Effect:
 	 > net_config：正在配网  
  
  3. 配置决策表
+ 
  在resource文件夹中led_state_config_roobo.csv是LED灯效的默认配置。
  
- ![如图:](/SmartSoundBox/assets/led.png)
+ ![如图](/SmartSoundBox/assets/led.png)
 只需要更改"输出"这一列,其他内容不要修改。根据自己产品的需求自定义各种State组合下输出的State。定义的State，一定要在LEDService的showState()中实现对应的LED灯效。
  决策表配置规则：
 	 > 1.每一行对应一种LED State  
@@ -109,6 +110,7 @@ Effect:
  原始配置文件中“media_playing”,表示的意思是:当前不是勿扰模式，并且不处于AI处理中、等待处理、正在加载多媒体、正在配网状态，并且正在播放多媒体。则显示"media_playing"灯效
  
  4. 生成决策文件
+ 
 	 1.准备好python3的环境
 	 2.复制led_state_config_roobo.csv到resource中的DecisionTree文件夹中，执行下面命令生成"led_state_decision_tree.json"文件
 	 
