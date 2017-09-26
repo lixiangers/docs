@@ -132,6 +132,6 @@ OSStateHelper.sendActionDone();
 
 1.进入resource根目录执行
 
-> python deploy new/old(第一次部署一定要使用new,以后使用old/new 都可以)
+> python deploy new/old(第一次部署一定要使用new,以后使用old)
 	  
 2.安装自己的LED App
