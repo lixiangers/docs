@@ -23,10 +23,10 @@ Agentid：xxxx
 上述的一些资料你可能不是完全清楚，邮件回复也需要时间，但是不需要担心，获取sn号是关键的一步，在快速接入指南中我们的roobo OS开发包中已经内置一份．可以保证你的机器人先运作起来，待后续申请成功后再替换即可．  
 sn号的替换后续在**获取roobo OS 开发包**中会有介绍．
 
-<table table-layout:fixed>
+<table >
 <tr><td width="100px">分类</td><td width="140px">实体名称</td><td width="140px">实体描述</td><td width="200px">举例</td><td width="200px">返回数据格式</td></tr>
 
-<tr><td rowspan="2" width="100px">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
+<tr><td rowspan="2">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
 <td width="200px">
 {"year":"2017","month":"05","day":"26","especial":"","kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
 type SDate struct {
@@ -67,4 +67,3 @@ type SDate struct {
 打电话给李XXX</td><td></td></tr>
 <tr><td>default</td><td>在模板中单独使用，需要配置上文,匹配任何字符。</td><td>例如：英译汉场景。进入场景后，只要没有退出场景，所有后面的输入都需要翻译。就需要在场景中配置一个只有default的模板来匹配所有的输入，来实现这个功能。</td><td></td></tr>
 </table>
-
