@@ -27,7 +27,7 @@ sn号的替换后续在**获取roobo OS 开发包**中会有介绍．
 <tr><td width="100px">分类</td><td width="140px">实体名称</td><td width="140px">实体描述</td><td width="200px">举例</td><td width="200px">返回数据格式</td></tr>
 
 <tr><td rowspan="2" width="100px">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
-<td td width="200px">
+<td width="200px">
 {"year":"2017","month":"05","day":"26","especial":"","kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
 type SDate struct {
     Year string `json:"year"` // 十二生肖，所以是string
