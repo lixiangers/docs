@@ -7,10 +7,10 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
 针对不同的硬件设备，roobo OS也提供了一整套标准化接口，包含运动控制，触摸传感器和LED灯阵显示等。借助roobo OS的功能，用户可以快速支持新增设备，同时也能够借助标准化的接口将已有的功能顺利移植到新的硬件上。
 
 <table >
-<tr><td width="100px">分类</td><td width="140px">实体名称</td><td width="140px">实体描述</td><td width="200px">举例</td><td width="200px">返回数据格式</td></tr>
-
-<tr><td rowspan="2">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
-<td width="200px">
+<tr><td>分类</td><td >实体名称</td><td>实体描述</td><td >举例</td><td>返回数据格式</td></tr>
+<tr>
+<td rowspan="2">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
+<td>
 {"year":"2017","month":"05","day":"26","especial":"","kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
 type SDate struct {
     Year string `json:"year"` // 十二生肖，所以是string
@@ -24,7 +24,8 @@ type SDate struct {
     YearDelta int `json:"yeardelta"` // 例：下一个猴年，yeardelta：12， 上一个猴年: yeardelta: -12
     MonthDelta int `json:"monthdelta"` //例：三个月后的初一，因为是阴历，所以这个月是几月框架没有概念。
 }
-</td></tr>
+</td>
+</tr>
 
 <tr><td>datatime</td><td>匹配一个日期时间</td><td>三个小时之后,下午两点</td>
 <td>有明确日期概念时（三个小时之后，明天12点，12月23号上午7点45 等），给出日期+时间； 没有明确日期概念时（12点，下午两点），只给出时间。 只支持公历日期
