@@ -10,7 +10,7 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
   <tr>
     <td>分类</td>
     <td >实体名称</td>
-    <td>实体描述</td>
+    <td width="200">实体描述</td>
     <td >举例</td>
     <td>返回数据格式</td>
   </tr>
@@ -39,7 +39,16 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
   </tr>
   <tr>
     <td>datatime</td>
-    <td>匹配一个日期时间(有明确日期概念时（三个小时之后，明天12点，12月23号上午7点45 等），给出日期+时间； 没有明确日期概念时（12点，下午两点），只给出时间。 只支持公历日期)</td>
+    <td>
+      匹配一个日期时间
+      (有明确日期概念时。例如:
+      三个小时之后，明天12点，
+      12月23号上午7点45，
+      给出日期+时间； 没有
+      明确日期概念时。例如12点，
+      下午两点，只给出时间。
+      只支持公历日期)
+    </td>
     <td>三个小时之后,下午两点</td>
     <td>{"date":"2017-01-01", "time":"08:00:00", "meridian":"am", "illegal":0}</td>
   </tr>
@@ -64,7 +73,13 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
     <td>{"amount":1,"unit":"m2"}</td></tr>
   <tr>
     <td>unit_currency</td>
-    <td>匹配汇率(unit 是变化的 范围参考 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217))</td>
+    <td>
+       <div>匹配汇率(unit是</div>
+       <div>变化的 范围参考</div>
+       <div>(https://en.wi</div>
+       <div>kipedia.org/wiki</div>
+       <div>/ISO_4217))</div>
+    </td>
     <td>10美</td>
     <td>{"amount":10,"unit":"USD"}</td>
   </tr>
