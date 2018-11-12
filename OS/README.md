@@ -25,16 +25,16 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
       <div>"kind":0, "status":0,</div>
       <div>"leap":false,"delta":0,</div>
       <div>"yeardelta":0,"monthdelta":0}</div>
-      <div>year :年</div>
-      <div>month:月</div>
-      <div>day:日</div>
-      <div>especial：节日描述</div>
-      <div>kind： 农历，公历</div>
-      <div>status： 状态</div>
-      <div>leap: 是否是闰月</div>
-      <div>delta: 天数，做推理用（三十之后的100天，只支持天数)</div>
-      <div>yeardelta:</div>
-      <div>monthdelta:</div>
+      <div>year :年(数字或者十二生肖)</div>
+      <div>month:月(数字)</div>
+      <div>day:日(数字</div>
+      <div>especial：节日(24节气/重要节日)</div>
+      <div>kind： 0:农历  1:公历</div>
+      <div>status： 0:日期无误 1:日期有误</div>
+      <div>leap: 当前输入的月份是否是闰月(如果说闰6月 则是ture)</div>
+      <div>delta: 间隔的天数 例如: 三十之后的100天 delta:100</div>
+      <div>yeardelta: 间隔的年数  例如:下个猴年三十儿yeardelta：12</div>
+      <div>monthdelta: 间隔的月数 例如：三个月后的初一 monthdelta: 3</div>
     </td>
   </tr>
   <tr>
@@ -146,3 +146,9 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
     <td></td>
   </tr>
 </table>
+
+any/default 区别
+|-|any|default|
+|---|---|---|
+| 优先级|跨场景模板比较中，处于低优先级。|跨场景模板比较中，处于高优先级。|
+|使用场景|如果需要一个通配的实体，并且使用这个实体的场景是一个可以随时跳到别的场景，那么使用@sys.any|如果需要一个通配实体，并且这个模板所在的场景是一个相对来说比较封闭的场景，可能这个通配实体要获取所有的东西都送到该场景中进行处理(如翻译场景，认为进入场景之后，所有的query都是需要翻译的话)，那么使用@sys.default|
