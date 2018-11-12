@@ -8,7 +8,7 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
 
 <table>
     <tr>
-        <td>分类</td>
+        <td>分类Category</td>
         <td >实体名称</td>
         <td>实体描述</td>
         <td>举例</td>
