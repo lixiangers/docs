@@ -20,19 +20,20 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
         <td>匹配日期</td>
         <td>明天，大后天明年三月四号，下个月五号国庆节等</td>
         <td>
-            {"year":"2017","month":"05","day":"26","especial":"","kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
-type SDate struct {
-    Year string `json:"year"` // 十二生肖，所以是string
-    Month string `json:"month"` // 与year保持一致
-    Day string `json:"day"` // 与year保持一致
-    Especial string `json:"especial"` // 三十儿,二十四节气啥的，每年不确定是哪一天的
-    Kind LunisolarCalendar `json:"kind"` // 农历，公历
-    Status SysFuncStatusCode `json:"status"` // 状态
-    LeapMonth bool `json:"leap"` // 是否是闰月
-    Delta int `json:"delta"` //天数，做推理用（三十之后的100天，只支持天数）。 因为农历每个月的日子不固定，service自己算
-    YearDelta int `json:"yeardelta"` // 例：下一个猴年，yeardelta：12， 上一个猴年: yeardelta: -12
-    MonthDelta int `json:"monthdelta"` //例：三个月后的初一，因为是阴历，所以这个月是几月框架没有概念。
-}
+            {"year":"2017","month":"05","day":"26","especial":"",
+            "kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
+            type SDate struct {
+            Year string `json:"year"` // 十二生肖，所以是string
+            Month string `json:"month"` // 与year保持一致
+            Day string `json:"day"` // 与year保持一致
+            Especial string `json:"especial"` // 三十儿,二十四节气啥的，每年不确定是哪一天的
+            Kind LunisolarCalendar `json:"kind"` // 农历，公历
+            Status SysFuncStatusCode `json:"status"` // 状态
+            LeapMonth bool `json:"leap"` // 是否是闰月
+            Delta int `json:"delta"` //天数，做推理用（三十之后的100天，只支持天数）。 因为农历每个月的日子不固定，service自己算
+            YearDelta int `json:"yeardelta"` // 例：下一个猴年，yeardelta：12， 上一个猴年: yeardelta: -1
+            MonthDelta int `json:"monthdelta"` //例：三个月后的初一，因为是阴历，所以这个月是几月框架没有概念。
+            }
         </td>
     </tr>
     <tr>
