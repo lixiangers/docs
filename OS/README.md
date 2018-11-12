@@ -9,10 +9,10 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
 <table>
     <tr>
         <td>Category</td>
-        <td >实体名称</td>
-        <td>实体描述</td>
-        <td>举例</td>
-        <td>返回数据格式</td>
+        <td >Name</td>
+        <td>Descript</td>
+        <td>Explame</td>
+        <td>Data</td>
     </tr>
     <tr>
         <td rowspan="2">时间</td>
