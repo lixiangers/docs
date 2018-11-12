@@ -11,7 +11,8 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
 
 <tr><td rowspan="2">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
 <td>
-{"year":"2017","month":"05","day":"26","especial":"","kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
+<div>{"year":"2017","month":"05","day":"26","especial":"","kind":0,</div>
+ <div> "status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}</div>
 <div>year :年</div>
 <div>month:月</div>
 <div>day:日</div>
