@@ -147,7 +147,8 @@ roobo OS连接到roobo语义云和服务云，同时在本地集成了成熟的�
   </tr>
 </table>
 
-any/default 区别
+### any/default 区别
+
 |-|any|default|
 |---|---|---|
 | 优先级|跨场景模板比较中，处于低优先级。|跨场景模板比较中，处于高优先级。|
